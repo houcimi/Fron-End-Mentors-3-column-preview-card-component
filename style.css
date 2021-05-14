@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+/* font-family: 'Big Shoulders Display', cursive; */
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+body {
+    background-color: rgb(241, 241, 241);
+}
+
+.container {
+    height: calc(100vh - 38px);
+    max-width: 1440px;
+    align-items: center;
+    display: flex;
+    background-color: rgb(241, 241, 241);
+    justify-content: center;
+}
+.block {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    padding-top: 20px;
+}
+.col {
+    padding: 33px;
+}
+.col.sedan {
+    background-color: var(--bright-orange);
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+.col.suv {
+    background-color: var(--dark-cyan);
+}
+.col.luxury {
+    background-color: var(--very-dark-cyan);
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+.col img {
+    margin-bottom: 28px;
+
+}
+.col h2 {
+    font-family: 'Big Shoulders Display', cursive;
+    color: white;
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+}
+.col p {
+    font-family: 'Lexend Deca', cursive;
+    font-size: 15px;
+    color: white ;
+    margin-bottom: 88px;
+    line-height: 1.8;
+  
+}
+.col .learnmore {
+    padding: 15px 45px;
+    border: none;
+    border-radius: 25px;
+    background-color: white ;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.col.sedan .learnmore {
+    color: var(--bright-orange);
+}
+.col.sedan .learnmore:hover {
+    border: 1px solid white;
+    color: white;
+    background-color: var(--bright-orange);
+}
+.col.suv .learnmore {
+    color: var(--dark-cyan);
+}
+.col.suv .learnmore:hover {
+    border: 1px solid white;
+    color: white;
+    background-color: var(--dark-cyan);
+    
+}
+.col.luxury .learnmore {
+    color: var(--very-dark-cyan);
+}
+.col.luxury .learnmore:hover {
+    border: 1px solid white;
+    color: white;
+    background-color: var(--very-dark-cyan);
+   
+}
+@media (max-width:400px) {
+    .container {
+        height: 100%;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .col.sedan {
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        border-bottom-left-radius: 0;
+    }
+    .col.luxury {
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+    }
+}
+.attribution {
+    font-size: 12px;
+    text-align: center;
+    background-color: #f1f1f1;
+    height: 20px;
+}
+.attribution a {
+    text-decoration: none;
+    color: var(--bright-orange);
+}
